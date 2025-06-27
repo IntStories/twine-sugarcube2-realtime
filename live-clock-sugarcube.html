@@ -1,17 +1,2 @@
 <!--COPY THE CODE BELOW AND PASTE IT INTO A PASSAGE. ALTERNATIVELY, PASTE THE CODE IN THE 'StoryCaption' TO DISPLAY A CONSTANTLY UPDATING CLOCK FIXED TO THE LEFT SIDE OF THE SCREEN.-->
-<span id="live-time"></span>
-<script>
-  const updateTime = () => {
-    const d = new Date(),
-      h = (d.getHours() % 12) || 12,
-      m = d.getMinutes().toString().padStart(2, "0"),
-      s = d.getSeconds().toString().padStart(2, "0"),
-      ampm = d.getHours() < 12 ? "AM" : "PM",
-      date = d.toDateString();
-
-    document.getElementById("live-time").textContent = `${date} • ${h}:${m}:${s} ${ampm}`;
-  };
-
-  updateTime();
-  setInterval(updateTime, 1000);
-</script>
+<span id="live-time"></span><script>var u=()=>{const d=new Date(),h=((d.getHours()%12)||12),m=d.getMinutes().toString().padStart(2,"0"),s=d.getSeconds().toString().padStart(2,"0"),ampm=d.getHours()<12?"AM":"PM",date=d.toDateString();document.getElementById("live-time").textContent=`${date} • ${h}:${m}:${s} ${ampm}`};u();setInterval(u,1000);</script>
