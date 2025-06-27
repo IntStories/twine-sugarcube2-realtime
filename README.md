@@ -17,20 +17,4 @@ Displays a live, updating clock directly within your passage or globally via `St
 3. (Optional) Paste it in the **StoryCaption** to make it appear on all pages.
 
 ```html
-<span id="live-time"></span>
-<script>
-  const updateTime = () => {
-    const d = new Date(),
-      h = (d.getHours() % 12) || 12,
-      m = d.getMinutes().toString().padStart(2, "0"),
-      s = d.getSeconds().toString().padStart(2, "0"),
-      ampm = d.getHours() < 12 ? "AM" : "PM",
-      date = d.toDateString();
-
-    document.getElementById("live-time").textContent =
-      `${date} • ${h}:${m}:${s} ${ampm}`;
-  };
-
-  updateTime();
-  setInterval(updateTime, 1000);
-</script>
+<span id="live-time"></span><script>var u=()=>{const d=new Date(),h=((d.getHours()%12)||12),m=d.getMinutes().toString().padStart(2,"0"),s=d.getSeconds().toString().padStart(2,"0"),ampm=d.getHours()<12?"AM":"PM",date=d.toDateString();document.getElementById("live-time").textContent=`${date} • ${h}:${m}:${s} ${ampm}`};u();setInterval(u,1000);</script>
